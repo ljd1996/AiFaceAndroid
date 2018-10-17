@@ -56,10 +56,12 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         if (HttpUtil.sBaseUrl.isEmpty()) {
             return;
         }
+        String token = mSharedPreferences.getString(Constant.LOGIN_TOKEN, "");
+        if (token.isEmpty()) {
+            return;
+        }
 
         showLoading();//显示加载框
-        String token = mSharedPreferences.getString(Constant.LOGIN_TOKEN, "");
-
         Log.d("LLL", "token = " + token);
 
         HashMap<String, String> map = new HashMap<>();

@@ -66,6 +66,14 @@
             android:textColor="@android:color/white"
             android:text="开启新的签到"/>
 
+    <Button
+            android:id="@+id/logout_btn"
+            android:layout_width="250dp"
+            android:layout_height="48dp"
+            android:background="@drawable/btn_orange_selector"
+            android:textColor="@android:color/white"
+            android:text="退出登录"/>
+
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

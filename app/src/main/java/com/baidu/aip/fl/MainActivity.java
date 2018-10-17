@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button login1Btn;
     private Button resultBtn;
     private Button startBtn;
+    private Button logoutBtn;
     private Button detectedBtn;
     private Button resetBtn;
     private SharedPreferences sharedPreferences;
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         regBtn = (Button) findViewById(R.id.reg_btn);
         resultBtn = (Button) findViewById(R.id.result_btn);
         startBtn = (Button) findViewById(R.id.start_btn);
+        logoutBtn = (Button) findViewById(R.id.logout_btn);
         login1Btn = (Button) findViewById(R.id.login1_btn);
         detectedBtn = (Button) findViewById(R.id.detected_btn);
         resetBtn = (Button) findViewById(R.id.reset_btn);
@@ -69,6 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         regBtn.setOnClickListener(this);
         resultBtn.setOnClickListener(this);
         startBtn.setOnClickListener(this);
+        logoutBtn.setOnClickListener(this);
         login1Btn.setOnClickListener(this);
         detectedBtn.setOnClickListener(this);
         resetBtn.setOnClickListener(this);
@@ -164,6 +167,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                     "服务器错误!", Toast.LENGTH_LONG).show();
                         }
                     });
+        } else if (logoutBtn == v) {
+            sharedPreferences.edit().remove(Constant.LOGIN_TOKEN).apply();
+            startActivity(new Intent(
+                    MainActivity.this, LoginActivity.class)
+                    .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK
+                            | Intent.FLAG_ACTIVITY_NEW_TASK));
+            finish();
         }
     }
 }
