@@ -16,7 +16,7 @@
     <application
             android:name="com.baidu.aip.fl.DemoApplication"
             android:allowBackup="true"
-            android:icon="@mipmap/ic_launcher"
+            android:icon="@drawable/icon"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
@@ -28,21 +28,25 @@
         </activity>
         <activity
                 android:name="com.baidu.aip.fl.RegActivity"
-                android:screenOrientation="portrait"/>
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
         <activity
                 android:name="com.baidu.aip.fl.VerifyLoginActivity"
-                android:screenOrientation="portrait"/>
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
                 android:name="com.baidu.aip.fl.DetectLoginActivity"
                 android:screenOrientation="portrait"
                 android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
                 android:name="com.baidu.aip.fl.LoginResultActivity"
-                android:screenOrientation="portrait"/>
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
                 android:name="com.baidu.aip.fl.FaceDetectActivity"
-                android:screenOrientation="portrait"/>
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
                 android:name="com.baidu.aip.fl.LoginActivity"
                 android:screenOrientation="portrait"
