@@ -39,5 +39,6 @@
     <string name="liveness_head_down">缓慢低头</string>
     <string name="liveness_good">非常好</string>
     <string name="server">服务器设置</string>
-    <string name="tv_server">http://10.10.64.199:8080/</string>
+    <string name="tv_server">http://www.hustwyb.cn:5000/</string>
+    <!--<string name="tv_server">http://10.10.64.199:8080/</string>-->
 </resources>
